@@ -12,14 +12,15 @@ describe('Ship', () => {
     });
 
     it('should register hits', () => {
-        ship.hit();
-        expect(ship.hits).toBe(1);
+        ship.hit([0, 0]);
+        expect(ship.hits).toHaveLength(1);
+        expect(ship.hits[0]).toEqual([0, 0]);
     });
 
     it('should be sunk when all positions are hit', () => {
-        ship.hit();
-        ship.hit();
-        ship.hit();
+        ship.hit([0, 0]);
+        ship.hit([0, 1]);
+        ship.hit([0, 2]);
         expect(ship.isSunk()).toBe(true);
     });
 
