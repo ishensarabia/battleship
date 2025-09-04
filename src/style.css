@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-mode-selection {
+    text-align: center;
+}
+
+#game-container {
+    text-align: center;
+}
+
+h1 {
+    color: #005a9c;
+}
+
+#game-boards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+    border: 2px solid #005a9c;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #b0c4de;
+    background-color: #e6f7ff;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #d0e0f0;
+}
+
+.cell.ship {
+    background-color: #808080;
+}
+
+.cell.hit {
+    background-color: #ff4500;
+}
+
+.cell.miss {
+    background-color: #add8e6;
+}
+
+.cell.sunk {
+    background-color: #ff0000;
+}
+
+#game-info {
+    font-size: 1.2em;
+    color: #d9534f;
+    min-height: 1.5em;
+}
+
+#pass-device-modal, #game-over-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#restart-button, #continue-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #005a9c;
+    color: white;
+    border-radius: 5px;
+}

@@ -5,10 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "build": "webpack"
   },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "jest": "^27.5.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
   },
   "author": "",
   "license": "ISC"
