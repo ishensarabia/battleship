@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+</head>
+<body>
+    <div id="game-mode-selection">
+        <h1>Battleship</h1>
+        <button id="single-player-btn">Single Player</button>
+        <button id="two-player-btn">Two Player</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="game-boards">
+            <div>
+                <h2 id="player1-title">Your Board</h2>
+                <div id="player-board"></div>
+            </div>
+            <div>
+                <h2 id="player2-title">Enemy Board</h2>
+                <div id="npc-board"></div>
+            </div>
+        </div>
+        <div id="game-info"></div>
+    </div>
+
+    <div id="pass-device-modal" style="display: none;">
+        <div id="modal-content">
+            <p id="pass-device-message"></p>
+            <button id="continue-btn">Continue</button>
+        </div>
+    </div>
+
+    <div id="game-over-modal" style="display: none;">
+        <div id="modal-content">
+            <p id="game-over-message"></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+</body>
+</html>

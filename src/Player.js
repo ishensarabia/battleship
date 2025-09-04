@@ -1,10 +1,9 @@
-import Gameboard from './Gameboard';
+import Gameboard from './Gameboard.js';
 
 class Player {
-    constructor(name, marker, gameboard = new Gameboard()) {
+    constructor(name) {
         this.name = name;
-        this.marker = marker;
-        this.gameboard = gameboard;
+        this.gameboard = new Gameboard();
     }
 }
 

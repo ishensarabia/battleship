@@ -1,5 +1,5 @@
-import NPC from '../src/NPC';
-import Gameboard from '../src/Gameboard';
+import NPC from '../src/NPC.js';
+import Gameboard from '../src/Gameboard.js';
 
 describe('NPC', () => {
     let npc;

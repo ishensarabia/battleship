@@ -1,8 +1,9 @@
-import Gameboard from './Gameboard';
+import Gameboard from './Gameboard.js';
 
 class NPC {
-    constructor(gameboard = new Gameboard()) {
-        this.gameboard = gameboard;
+    constructor() {
+        this.name = 'NPC';
+        this.gameboard = new Gameboard();
     }
 }
 

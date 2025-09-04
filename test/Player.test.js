@@ -1,35 +1,22 @@
-import Player from '../src/Player';
-import Gameboard from '../src/Gameboard';
+import Player from '../src/Player.js';
+import Gameboard from '../src/Gameboard.js';
 
 describe('Player', () => {
     let player;
-    let gameboard;
 
     beforeEach(() => {
-        gameboard = new Gameboard();
-        player = new Player('Player 1', 'X', gameboard);
+        player = new Player('John');
     });
 
-    it('should create a Player instance', () => {
+    it('should create a player instance', () => {
         expect(player).toBeDefined();
     });
 
     it('should have the correct name', () => {
-        expect(player.name).toBe('Player 1');
-    });
-
-    it('should have the correct marker', () => {
-        expect(player.marker).toBe('X');
+        expect(player.name).toBe('John');
     });
 
     it('should have a gameboard', () => {
-        expect(player.gameboard).toBeDefined();
         expect(player.gameboard).toBeInstanceOf(Gameboard);
-    });
-
-    it('should create its own gameboard if none provided', () => {
-        const newPlayer = new Player('Player 2', 'O');
-        expect(newPlayer.gameboard).toBeDefined();
-        expect(newPlayer.gameboard).toBeInstanceOf(Gameboard);
     });
 });
